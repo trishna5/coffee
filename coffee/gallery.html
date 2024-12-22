@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+    {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    body
+    {
+       background: linear-gradient(black,brown,black);
+    } 
+    .nav
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        height: 100px;
+        background-color: white;
+        box-shadow: 0 0 8px rgba(0,0,0,0.3);
+        text-align: center;
+        align-items: center;
+    }
+    .nav .logo h1
+    {
+        color:brown;
+        font-family: mv boli;
+    }
+    .nav .link ul
+    {
+        display: flex;
+        flex-wrap: wrap;
+        text-decoration: none;
+        list-style: none;
+        justify-content: space-around;
+        width: 600px;
+        align-items: center;
+        text-align: center;
+        height: 100px;
+    }
+    .nav .link ul li
+    {
+    
+        width: 90px;
+        height: 30px;
+        border-radius: 20px;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    .nav .link ul li a
+    {
+        text-decoration: none;
+        font-family: stencil;
+        letter-spacing: 2px;
+        color: brown;
+        font-size:20px;
+    }
+    .nav .link ul li a::after
+    {
+        content: '';
+        position: relative;
+        background: brown;
+        width: 0;
+        height: 2px;
+        display: block;
+        transition: 0.3s;
+    }
+    .nav .link ul li a:hover::after
+    {
+        width: 100%;
+    }
+    .nav button
+    {
+        height: 50px;
+        width: 150px;
+        font-family: elephant;
+        background-color: brown;
+        box-shadow: 0 0 8px rgba(0,0,0,0.3);
+        color: white;
+        font-size:20px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        transition: 0.3s ease-in-out;
+    }
+    .nav button:hover
+    {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+.menu
+{
+    width: 100%;
+    height: 600px;
+}
+.par p
+{
+    color: white;
+    font-size: 50px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+.par span
+{
+    margin-left: 20px;
+}
+.content1
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.imag
+{
+    width: 650px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.content1 .imag .image1 
+{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+
+}
+.content1 .imag .image1 img
+{
+    width: 200px;
+    height: 200px;
+    transition: 0.3s;
+    box-shadow: 0 0 8px #cccccc;
+}
+.content1 .imag .image1:hover img 
+{
+    opacity: 0.3;
+    background: black;
+    cursor: pointer;
+}
+.content1 .imag .image1 h1
+{
+    position: absolute;
+    font-size: 35px;
+    opacity: 0;
+    color: white;
+    z-index: 5;
+    transition: 0.5s;
+}
+.content1 .imag .image1:hover h1
+{
+    margin-bottom: 60px;
+    opacity: 1;
+    cursor: pointer;
+}
+.content1 .imag .image1 h3
+{
+    position: absolute;
+    font-size: 25px;
+    opacity: 0;
+    color: white;
+    background-color: rgb(241, 10, 10);
+    width: 150px;
+    z-index: 5;
+    transition: 0.5s;
+    text-align: center;
+    border-radius: 30px;
+}   
+.content1 .imag .image1:hover h3
+{
+    margin-top: 90px;
+    opacity: 1;
+    cursor: pointer; 
+}
+.menu
+{
+    width: 100%;
+    height: 100vh;
+    border-top: 3px solid #cccccc;
+}
+.content1 .vid
+{
+    margin-top: 50px;
+    width: 500px;
+    height: 500px;
+}
+.text i
+{
+    font-size: large;
+    margin-left: 20px;
+}
+h3 i
+{
+    font-size: small;
+}
+@media screen and (max-width:780px)
+    {
+        .nav
+        {
+            height: 200px;
+            flex-direction: column;
+
+        }
+        .nav .link ul 
+        {
+            width: 300px;
+        }
+        .logo
+        {
+            width: 100%;
+        }
+        .nav .link ul
+        {
+            justify-content: center;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 90px;
+        }
+        .nav .link ul li a
+        {
+            letter-spacing: 0px;
+            font-size:15px;
+        }
+        .content1
+        {
+            flex-wrap: wrap;
+        }
+        .imag
+        {
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+           grid-gap:10px;
+           width: 410px;
+
+        }
+        .vid video
+        {
+            width: 350px;
+            height: 400px;
+        }
+        .imag .image1 img{
+            height: 10px;
+            width: 10px;
+        }
+}
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <h1>Coffee Bar</h1>
+        </div>
+        <div class="link">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="review.html">Review</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+            <button type="submit">Log in</button>
+    </div>
+   <div class="menu" id="Menu">
+    <div class="par">
+        <p>The <span>Gallery</span>....!</p>
+    </div>
+    <div class="content1">      
+        <div class="vid">
+            <video controls autoplay muted src="vid1.mp4" width="450" height="500" >
+            </video>
+            <p>A coffee a day keeps stress away..!</p>
+        </div>
+        <div class="i">
+            <div class="imag">
+                <div class="image1">
+                 <h1>Coffee Latte</h1>
+                 <h3>Order Now</h3>
+                 <img src="img2.jpeg" alt="">
+                </div>
+                <div class="image1">
+                 <h1>Black Coffee</h1>
+                 <h3>Order Now</h3>
+                 <img src="img3.jpeg" alt="">
+                </div>  
+                <div class="image1">
+                 <h1>Cold Coffee</h1>
+                 <h3>Order Now</h3>            
+                 <img src="img4.jpeg" alt="">
+                </div>
+                 <div class="image1">
+                  <h1>Brew Coffee</h1>
+                  <h3>Order Now</h3>
+                  <img src="img1.jpeg" alt="">
+                 </div>
+                 <div class="image1">
+                  <h1>Filter Coffee</h1>
+                  <h3>Order Now</h3>
+                  <img src="img5.jpeg" alt="">
+                 </div>  
+                 <div class="image1">
+                  <h1>Spiced Vanilla Coffee</h1>
+                  <h3>Order Now</h3>            
+                  <img src="img6.jpeg" alt="">
+                 </div>
+              </div>
+        </div>
+         
+    </div>
+   </div>
+
+</body>
+</html>

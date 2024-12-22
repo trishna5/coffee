@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+    {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    body
+    {
+       background: linear-gradient(black,brown,black);
+    } 
+    .nav
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        height: 100px;
+        background-color: white;
+        box-shadow: 0 0 8px rgba(0,0,0,0.3);
+        text-align: center;
+        align-items: center;
+    }
+    .nav .logo h1
+    {
+        color:brown;
+        font-family: mv boli;
+    }
+    .nav .link ul
+    {
+        display: flex;
+        flex-wrap: wrap;
+        text-decoration: none;
+        list-style: none;
+        justify-content: space-around;
+        width: 600px;
+        align-items: center;
+        text-align: center;
+        height: 100px;
+    }
+    .nav .link ul li
+    {
+    
+        width: 90px;
+        height: 30px;
+        border-radius: 20px;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    .nav .link ul li a
+    {
+        text-decoration: none;
+        font-family: stencil;
+        letter-spacing: 2px;
+        color: brown;
+        font-size:20px;
+    }
+    .nav .link ul li a::after
+    {
+        content: '';
+        position: relative;
+        background: brown;
+        width: 0;
+        height: 2px;
+        display: block;
+        transition: 0.3s;
+    }
+    .nav .link ul li a:hover::after
+    {
+        width: 100%;
+    }
+    .nav button
+    {
+        height: 50px;
+        width: 150px;
+        font-family: elephant;
+        background-color: brown;
+        box-shadow: 0 0 8px rgba(0,0,0,0.3);
+        color: white;
+        font-size:20px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        transition: 0.3s ease-in-out;
+    }
+    .nav button:hover
+    {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+.main
+{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main .box
+{
+    width: 390px;
+    height: 500px;
+    border-radius: 50px;
+    background-color: white;
+    display: flex;
+}
+.main .box form input
+{
+    width: 250px;
+    height: 30px;
+    position: relative;
+    top:15%;
+    margin: 10px;
+    color: brown;
+}
+.main .box form input:focus
+{
+    background-color: #cccccc;
+}
+.main .box form h1
+{
+    position: relative;
+    font-size: 50px;
+    top:10%;
+}
+.main .box form .but
+{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+
+}
+.main .box form .but button
+{
+    width: 100px;
+    height: 50px;
+    background-color: brown;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: mv boli;
+}
+.main .box form .but button:hover
+{
+    cursor: pointer;
+    opacity: 0.3;
+}
+@media screen and (max-width:780px)
+    {
+        .nav
+        {
+            height: 200px;
+               flex-direction: column;
+
+        }
+        .nav .link ul 
+        {
+            width: 300px;
+        }
+        .logo
+        {
+            width: 100%;
+        }
+        .nav .link ul
+        {
+            justify-content: center;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 90px;
+        }
+    .nav .link ul li a
+    {
+        letter-spacing: 0px;
+        font-size:15px;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <h1>Coffee Bar</h1>
+        </div>
+        <div class="link">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="review.html">Review</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+            <button type="submit">Log in</button>
+    </div>
+   <div class="main">
+    <div class="box">
+        <form action="">
+            <h1>Log In</h1>
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="number" placeholder="Mobile No.">
+            <input type="text" placeholder="Address">
+            <input type="number" placeholder="Quantity">
+            <div class="but">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+   </div>
+</body>
+</html>
